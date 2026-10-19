@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Dimensions, FlatList, Image, KeyboardAvoidingView, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Dimensions, FlatList, Image, KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { styles } from '../../assets/styles';
 
 const { width } = Dimensions.get('window');
@@ -57,37 +57,40 @@ function BookList() {
     </View>
   );
 
-  return (
+return (
     <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
-      <Image style={styles.logo} source={require('../assets/book.png')} />
+      <Image style={styles.logo} source={require('../../assets/book.png')} />
       <Text style={styles.title}>My Bookshelf</Text>
-      <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-        <View style={styles.inputContainer}>
-          <TextInput
-            ref={titleInputRef}
-            style={styles.input}
-            placeholder="Book Title"
-            onChangeText={setTitle}
-            value={title}
-          />
-          <TextInput
-            style={styles.input}
-            placeholder="Author"
-            onChangeText={setAuthor}
-            value={author}
-          />
-          <TouchableOpacity onPress={addBook} style={styles.addButton}>
-            <Text style={styles.addButtonText}>Add Book</Text>
-          </TouchableOpacity>
-        </View>
-        <Text style={styles.totalBooks}>Total Books: {books.length}</Text>
-        <FlatList
-          data={books}
-          renderItem={renderItem}
-          keyExtractor={(item) => item.id}
-          contentContainerStyle={styles.flatListContainer}
-        />
-      </ScrollView>
+      
+      <FlatList
+        data={books}
+        keyExtractor={(item) => item.id}
+        contentContainerStyle={styles.flatListContainer}
+        renderItem={renderItem}
+        ListHeaderComponent={
+          <View>
+            <View style={styles.inputContainer}>
+              <TextInput
+                ref={titleInputRef}
+                style={styles.input}
+                placeholder="Book Title"
+                onChangeText={setTitle}
+                value={title}
+              />
+              <TextInput
+                style={styles.input}
+                placeholder="Author"
+                onChangeText={setAuthor}
+                value={author}
+              />
+              <TouchableOpacity onPress={addBook} style={styles.addButton}>
+                <Text style={styles.addButtonText}>Add Book</Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={styles.totalBooks}>Total Books: {books.length}</Text>
+          </View>
+        }
+      />
     </KeyboardAvoidingView>
   );
 }
