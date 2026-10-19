@@ -10,7 +10,9 @@ This project focuses on implementing a modern, space-efficient UI and essential 
 
 ## 📸 App Preview
 
-<img width="710" height="1601" alt="WhatsApp Image 2026-10-19 at 10 56 57" src="https://github.com/user-attachments/assets/c59f1ac6-8a63-411b-9c62-c11ff9af128e" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b04fd864-287b-4b6f-9773-c6c83e87bf8d" alt="my-bookshelf-app-preview" width="200" />
+</p>
 
 *Figure 1: Full-screen view of the My Bookshelf app with side-by-side layout and interactive progress bar.*
 
@@ -34,3 +36,8 @@ To run this project locally on your machine:
    npx expo start -c
 4. Scan the QR code using the Expo Go app on your physical device.
 
+## 👤 Author
+**Delinda Mega Putri**
+- 🎓 Informatics Engineering, Universitas Muhammadiyah Sukabumi
+- 💼 [LinkedIn](https://www.linkedin.com/in/dlnmgp)
+- 📧 Email: delindamegaputri123@gmail.com
