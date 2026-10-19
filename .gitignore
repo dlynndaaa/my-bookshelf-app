@@ -36,6 +36,11 @@ yarn-error.*
 # typescript
 *.tsbuildinfo
 
+# AI & Custom Files
+.claude/
+.claude
+AGENTS.md
+
 example
 
 # generated native folders
