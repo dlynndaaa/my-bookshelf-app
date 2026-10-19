@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { View, Text, TextInput, TouchableOpacity, FlatList, KeyboardAvoidingView, ScrollView, Dimensions, Image } from 'react-native';
-import { styles } from '../assets/styles';
+import { useEffect, useRef, useState } from 'react';
+import { Dimensions, FlatList, Image, KeyboardAvoidingView, ScrollView, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { styles } from '../../assets/styles';
 
 const { width } = Dimensions.get('window');
 
